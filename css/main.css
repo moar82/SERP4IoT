@@ -38,6 +38,13 @@ ul.posts {
     font-size: 1.5em;
 }
 
+iframe {
+    height: 500px;
+    width: 500px;
+    resize: both;
+    overflow: auto;
+}
+
 ul.posts li {
     list-style: none;
 }
