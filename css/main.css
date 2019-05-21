@@ -45,6 +45,11 @@ iframe {
     overflow: auto;
 }
 
+div {
+  overflow: hidden;
+  resize: both;
+}
+
 ul.posts li {
     list-style: none;
 }
