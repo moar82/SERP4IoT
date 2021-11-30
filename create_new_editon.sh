@@ -1,17 +1,23 @@
 #!/bin/bash
 ###Author: Rodirgo Morales
-#This script archives the current edition in a new folder name after the first parameter.
-#It also updates the hyperlinks to work with the past edition
+##This script archives the current edition in a new folder name after the first parameter.
+##It also updates the hyperlinks to work with the past edition.
+## It 
+##Example: ./create_new_editon.sh 2050
 
 YEAR=$1
 
 cd past_editions
+##Do not forget to add an item in the file ./past_editions/index.html with the archived workshop 
+sed -i 's|<ul>|<ul> \n <li><a href="https://moar82.github.io/SERP4IoT/past_editions/'$YEAR'/index.html">'$YEAR'</a></li>|g' index.html
+
 mkdir $YEAR
 
  if [ -d "$YEAR" ] # if it's a directory
     then
         
 		#copy the folders in the past edition directory.
+		cp ../index.html ./$YEAR
 		cp -r ../apapers ./$YEAR
 		cp -r ../aprogram ./$YEAR
 		cp -r ../attending ./$YEAR
@@ -24,13 +30,15 @@ mkdir $YEAR
 
 		cd $YEAR
 		find . -name "*.html" -print0 | xargs -0 sed -i 's/default/default'$YEAR' /g'
+fi
 
 		##TODO: Functionality to automatically create html file in SERP4IoT/_layouts
+		
 		cd ../../_layouts
 
 		touch default$YEAR.html
 
-		cat > default$YEAR.html << EOF
+		cat > default$YEAR.html << _EOF_
 
 		<!DOCTYPE html>
 			<html>
@@ -68,6 +76,4 @@ mkdir $YEAR
 				</body>
 			</html>
 
-
-		EOF
-fi
+_EOF_
