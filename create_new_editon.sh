@@ -4,6 +4,8 @@
 ##It also updates the hyperlinks to work with the past edition.
 ## It 
 ##Example: ./create_new_editon.sh 2050
+##			where 2050 is the current year that you want to archive.  
+##			the next step is to modify the index file in the root path, which would be the new year.
 
 YEAR=$1
 
