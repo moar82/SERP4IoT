@@ -32,8 +32,6 @@ mkdir $YEAR
 		cd $YEAR
 		find . -name "*.html" -print0 | xargs -0 sed -i 's/default/default'$YEAR' /g'
 fi
-
-		##TODO: Functionality to automatically create html file in SERP4IoT/_layouts
 		
 		cd ../../_layouts
 
@@ -77,3 +75,42 @@ fi
 			</html>
 
 _EOF_
+## Create an empty web page for keynotes with the legend TBA
+		cd ../aprogram
+		cat > index.html << _EOF_
+---
+layout: default
+title: Keynotes
+---
+
+<h2>To be announced ...</h2>
+_EOF_
+
+
+## Create an empty web page for accepted papers with the legend TBA
+		cd ../apapers
+		cat > index.html << _EOF_
+---
+layout: default
+title: Accepted papers
+---
+
+<h2>To be announced ...</h2>
+_EOF_
+
+
+## Create an empty web page for Program with the legend TBA
+		cd ../program
+		cat > index.html << _EOF_
+---
+layout: default
+title: Workshop program
+---
+
+<h2>To be announced ...</h2>
+_EOF_
+
+
+echo Do not forget to update "call for papers" at /cpapers/index.html
+echo 	"Submissions " /sb/index.html
+echo and /index.html
