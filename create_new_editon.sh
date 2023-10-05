@@ -25,7 +25,6 @@ mkdir $YEAR
 		cp -r ../attending ./$YEAR
 		cp -r ../Committees ./$YEAR
 		cp -r ../cpapers ./$YEAR
-		cp -r ../idates ./$YEAR
 		cp -r ../program ./$YEAR
 		cp -r ../sb ./$YEAR
 		cp -r ../submissions ./$YEAR
@@ -58,8 +57,7 @@ fi
 					<li><a href="https://moar82.github.io/SERP4IoT/past_editions/$YEAR/aprogram">Keynotes</a></li>
 					<li><a href="https://moar82.github.io/SERP4IoT/past_editions/$YEAR/apapers">Accepted papers</a></li>
 					<li><a href="https://moar82.github.io/SERP4IoT/past_editions/$YEAR/program">Program</a></li>
-					<li><a href="https://moar82.github.io/SERP4IoT/past_editions/$YEAR/Committees">Committees</a></li>
-					<li><a href="https://moar82.github.io/SERP4IoT/past_editions/$YEAR/idates">Important dates</a></li>            
+					<li><a href="https://moar82.github.io/SERP4IoT/past_editions/$YEAR/Committees">Committees</a></li>         
 					<li><a href="https://moar82.github.io/SERP4IoT/past_editions/$YEAR/attending">Attending</a></li>
 					<li><a href=https://moar82.github.io/SERP4IoT/>Current edition</a></li>
 						</ul>
