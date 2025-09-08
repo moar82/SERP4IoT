@@ -1,10 +1,10 @@
 #!/bin/bash
-###Author: Rodirgo Morales
+###Author: Rodrigo Morales
 ##This script archives the current edition in a new folder name after the first parameter.
 ##It also updates the hyperlinks to work with the past edition.
 ## It 
 ##Example: ./create_new_editon.sh 2050
-##			where 2050 is the current year that you want to archive.  
+##			where 2050 is the year that you want to archive.  
 ##			the next step is to modify the index file in the root path, which would be the new year.
 
 YEAR=$1
@@ -20,14 +20,14 @@ mkdir $YEAR
         
 		#copy the folders in the past edition directory.
 		cp ../index.html ./$YEAR
-		cp -r ../apapers ./$YEAR
-		cp -r ../aprogram ./$YEAR
-		cp -r ../attending ./$YEAR
+		cp -r ../apapers ./$YEAR #accepted papers
+		cp -r ../aprogram ./$YEAR #keynotes
+		#cp -r ../attending ./$YEAR
 		cp -r ../Committees ./$YEAR
 		cp -r ../cpapers ./$YEAR
 		cp -r ../program ./$YEAR
-		cp -r ../sb ./$YEAR
-		cp -r ../submissions ./$YEAR
+		cp -r ../sb ./$YEAR #submission guidelines
+		#cp -r ../submissions ./$YEAR
 
 		cd $YEAR
 		find . -name "*.html" -print0 | xargs -0 sed -i 's/default/default'$YEAR' /g'
@@ -56,7 +56,6 @@ fi
 					<li><a href="https://moar82.github.io/SERP4IoT/past_editions/$YEAR/apapers">Accepted papers</a></li>
 					<li><a href="https://moar82.github.io/SERP4IoT/past_editions/$YEAR/program">Program</a></li>
 					<li><a href="https://moar82.github.io/SERP4IoT/past_editions/$YEAR/Committees">Committees</a></li>         
-					<li><a href="https://moar82.github.io/SERP4IoT/past_editions/$YEAR/attending">Attending</a></li>
 					<li><a href=https://moar82.github.io/SERP4IoT/>Current edition</a></li>
 						</ul>
 					</nav>
