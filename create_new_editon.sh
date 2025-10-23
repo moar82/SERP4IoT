@@ -56,7 +56,7 @@ fi
 					<li><a href="https://moar82.github.io/SERP4IoT/past_editions/$YEAR/apapers">Accepted papers</a></li>
 					<li><a href="https://moar82.github.io/SERP4IoT/past_editions/$YEAR/program">Program</a></li>
 					<li><a href="https://moar82.github.io/SERP4IoT/past_editions/$YEAR/Committees">Committees</a></li>         
-					<li><a href=https://moar82.github.io/SERP4IoT/>Current edition</a></li>
+					<li><a href="https://moar82.github.io/SERP4IoT/">Current edition</a></li>
 						</ul>
 					</nav>
 					<div class="container">
