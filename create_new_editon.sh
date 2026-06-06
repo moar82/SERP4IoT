@@ -3,8 +3,8 @@
 ##This script archives the current edition in a new folder name after the first parameter.
 ##It also updates the hyperlinks to work with the past edition.
 ## It 
-##Example: ./create_new_editon.sh 2050
-##			where 2050 is the year that you want to archive.  
+##Example: ./create_new_editon.sh 2050 //where 2050 is the year that you want to archive.  
+##			
 ##			the next step is to modify the index file in the root path, which would be the new year.
 
 YEAR=$1
